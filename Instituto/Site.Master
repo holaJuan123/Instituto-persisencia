@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Instituto.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="~/Styles/Site.css">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Instituto
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Presentación/frmPrincipal.aspx" Text="Principal" 
+                            Value="Principal"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Presentación/frmAlumnos.aspx" Text="ABM de Alumnos" />
+                        <asp:MenuItem NavigateUrl="~/Presentación/frmMaterias.aspx" Text="ABM de Materias" />
+                        <asp:MenuItem NavigateUrl="~/Presentación/frmCursos.aspx" Text="ABM de Cursos" />
+                        <asp:MenuItem NavigateUrl="~/Presentación/frmAcercaDe.aspx" 
+                            Text="Acerca de COPIAR" Value="Acerca de"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <asp:Image ID="Image1" runat="server" Height="58px" Width="48px" />
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
